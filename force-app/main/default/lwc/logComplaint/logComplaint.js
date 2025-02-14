@@ -11,9 +11,11 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class LogComplaint extends LightningElement {
             static complaintCount=1;
-    options=[{label:'Product Issue',value:'Product Issue'},
-            {label:'Technician Issue',value:'Technician Issue'},
-            {label:'Logistics Issue',value:'Logistics Issue'}];
+
+            options=[{label:'Product Issue',value:'Product Issue'},
+                    {label:'Technician Issue',value:'Technician Issue'},
+                    {label:'Logistics Issue',value:'Logistics Issue'}];
+
             @api caseId;
             @api accountId;
             @api accountName;
@@ -21,14 +23,10 @@ export default class LogComplaint extends LightningElement {
             selectedOption;
             description;
             resolution;
+
             handleOptionsChange(event){
                 this.selectedOption=event.detail.value;
-                
-                if (this.selectedOption && this.accountName) {
-                    this.complaintName = `${this.accountName} - ${this.selectedOption} - 
-                                            ${LogComplaint.complaintCount}`;
-                }
-                
+                        
             }
             handleDescriptionChange(event){
                 this.description=event.target.value;
@@ -39,8 +37,8 @@ export default class LogComplaint extends LightningElement {
 
            async handleSubmit(){
                 if(this.selectedOption && this.description){
-                    console.log('Selected Value: '+this.selectedOption);
-                    console.log('Description: '+this.description);
+                    this.complaintName = `${this.accountName} - ${this.selectedOption} - 
+                                            ${LogComplaint.complaintCount}`;
 
                     const fields={};
                     fields[CASE_LOOKUP.fieldApiName]=this.caseId;
