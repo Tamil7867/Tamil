@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-12-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Wire Adapters and Functions" >
+        <template lwc:if={accountData}>
+            <div class="slds-var-p-around_medium">
+                Account Name: {accountData.Name.value} <br>
+                Industry    : {accountData.Industry.value}
+            </div>
+        </template>
+        <template lwc:if={userData}>
+            <div class="slds-var-p-around_medium">
+                Name : {userData.Name.value} <br>
+                Email: {userData.Email.value}
+            </div>
+        </template>
+    </lightning-card>
+</template>

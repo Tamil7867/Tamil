@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-08-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card class="slds-var-p-around_small" title="Picklist Extented Datatable">
+        <template if:true={loading}>
+            <lightning-spinner></lightning-spinner>
+        </template>
+        <template if:false={loading}>
+            <c-custom-data-table
+                key-field="Id"
+                data={data}
+                columns={columns}
+                draft-values={draftValues}
+                oncellchange={handleCellChange}>
+            </c-custom-data-table>
+        </template>
+    </lightning-card>
+</template>

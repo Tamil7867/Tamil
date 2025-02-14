@@ -1,0 +1,57 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-28-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Master LWC with TOP 5 concepts_Template Iterator">
+        <div class="slds-var-p-around_medium">
+
+            <template iterator:it={conceptsObjArray}>
+                <div key={it.value.Id}>
+                    <template lwc:if={it.first}>
+                        <div class="slds-theme_shade slds-grid">
+                            <div class="slds-col slds-var-p-bottom_small slds-size_1-of-2">
+                               <b>Topics</b> 
+                            </div>
+                            <div class="slds-col slds-var-p-bottom_small slds-size_1-of-2">
+                                <b>Concepts</b>
+                            </div>
+                        </div>
+                    </template>
+                    <div class="topicsDiv slds-border_top slds-var-p-bottom_small slds-grid">
+                        <div class="slds-col slds-size_1-of-2">
+                            {it.value.Name}
+                        </div>
+                        <div class="conceptsDiv slds-col slds-size_1-of-2">
+                            {it.value.courseName}
+                        </div>
+                    </div>
+                    <template lwc:if={it.last}>
+                        <div class="lastClass slds-border_top slds-align_absolute-center">
+                            ©Copyrights <a href="https://www.ajskilldevelopment.com/"> www.ajskilldevelopment.com</a>
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+            <!-- <div class="slds-slds-col slds-size_1-of-2">
+                <template iterator:it={conceptsObjArray}>
+                    <div key={it.value.Id}>
+                        <template lwc:if={it.first}>
+                            <div class="slds-theme_shade">
+                                Concepts
+                            </div>
+                        </template>
+                        <div class="conceptsDiv slds-border_top">
+                        {it.value.Name}
+                    </div>
+                </div>
+                </template>
+            </div> -->
+        </div>
+    </lightning-card>
+
+</template>

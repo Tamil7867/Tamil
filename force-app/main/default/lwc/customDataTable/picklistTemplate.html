@@ -1,0 +1,35 @@
+<template>
+
+    <!-- <c-custom-picklist-column-data-table
+
+        label={typeAttributes.label}
+
+        value={typeAttributes.value}
+
+        placeholder={typeAttributes.placeholder}
+
+        options={typeAttributes.options}
+
+        >
+
+    </c-custom-picklist-column-data-table> -->
+
+    <lightning-combobox
+
+            name="picklist"
+
+            label={typeAttributes.label}
+
+            value={typeAttributes.value}
+
+            placeholder={typeAttributes.placeholder}
+
+            options={typeAttributes.options}
+
+            onchange={handleChange}
+
+            variant="label-hidden">
+
+        </lightning-combobox>
+
+</template>

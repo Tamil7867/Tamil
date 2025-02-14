@@ -1,0 +1,53 @@
+<!-- sldsValidatorIgnore -->
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 12-12-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+        <div class="slds-var-p-around_medium">
+            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+                <!-- sldsValidatorIgnoreNextLine -->
+                <!-- sldsValidatorIgnoreNextLine -->
+                <div class="slds-modal__container">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Cancel and close</span>
+                    </button>
+
+                    <div class="slds-modal__header">
+                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate" tabindex="-1">Indian Monuments</h1>
+                    </div>
+
+                    <div class="slds-modal__content slds-var-p-around_medium slds-grid" id="modal-content-id-1">
+                        <div class="slds-col">
+                            <img src="https://media.istockphoto.com/id/510795912/photo/india-gate.webp?b=1&s=170667a&w=0&k=20&c=Nts8vpG6WNkm8s3GSY-8LGmRGpwmzzJtowWLmSRvVks="
+                            alt="India Gate">
+                            <lightning-input lwc:ref="india" type="checkbox" label="India Gate" onchange={handleChangeIndia}></lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <img src="https://media.istockphoto.com/id/165204592/photo/qutub-minar-delhi-india.webp?b=1&s=170667a&w=0&k=20&c=rwjb5xAIOQl3-inJe7Wutc5o9Rzok214vNw4EKpkuz4="
+                            alt="Qutub Minar">
+                            <lightning-input lwc:ref="qutub" type="checkbox" label="Qutub Minar" onchange={handleChangeQutab}></lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <img src="https://media.istockphoto.com/id/519330110/photo/taj-mahal-agra-india-monument-of-love-in-blue-sky.webp?b=1&s=170667a&w=0&k=20&c=8XAl6nAQ7raW9n0_w12njW8kwQtmAtq6FEGfRZH2-aw="
+                            alt="Taj Mahal">
+                            <lightning-input lwc:ref="taj" type="checkbox" label="Taj Mahal" onchange={handleChangeTaj}></lightning-input>
+                        </div>
+                    </div>
+                    
+                    <div class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handleClickCancel}>Cancel</button>
+                    </div>                      
+                </div>
+            </section>
+                <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+        </div>
+    </lightning-card>
+</template>

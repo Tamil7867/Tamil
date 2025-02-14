@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-11-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Account Search">
+        <div class="slds-var-p-around_medium">
+            <lightning-input label="Enter Account Name" value={accName} onchange={handleChange}></lightning-input>
+            <lightning-button label="Search Accounts" variant="brand" onclick={handleClick}></lightning-button>
+        </div>
+        <div class="slds-var-p-around_medium">
+            <lightning-datatable key-field="Id" data={accData} columns={columList}></lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

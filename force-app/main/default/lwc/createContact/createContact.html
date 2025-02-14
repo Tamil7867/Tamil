@@ -1,0 +1,17 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-11-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Create Contact">
+        <div class="slds-var-p-around_medium">
+            <lightning-record-form object-api-name={objectApiName}
+            fields={fields}
+            onsuccess={handleSuccess}
+            ></lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

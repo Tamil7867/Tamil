@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 04-30-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <lightning-card title="Calculator">
+    <div class="slds-p-around_medium">
+      <lightning-input label="input1" name="num1" value={input1} onchange={handleChangeNum1}></lightning-input>
+      <lightning-input label="input2" name="num2" value={input2} onchange={handleChangeNum2}></lightning-input>
+      <lightning-button label="Add" onclick={calAdd}></lightning-button>
+      <lightning-button label="Sub" onclick={calSub}></lightning-button>
+      <lightning-button label="Mul" onclick={calMul}></lightning-button>
+      <lightning-button label="Div" onclick={calDiv}></lightning-button>
+      <lightning-button label="Clear" onclick={calClr}></lightning-button>
+      <br>
+        
+      Answer = {Answer}
+    </div>
+  </lightning-card>
+    
+</template>

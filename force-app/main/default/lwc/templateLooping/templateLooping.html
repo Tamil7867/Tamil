@@ -1,0 +1,51 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-20-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Template Looping">
+        <div class="slds-var-p-around_medium">
+            <lightning-input type="text" label="Lead Name" value={name} onchange={handleChangeName}></lightning-input>
+            <lightning-input type="text" label="Lead Source" value={source} onchange={handleChangeSource}></lightning-input>
+            <lightning-input type="text" label="Annual Revenue" value={revenue} onchange={handleChangeRevenue}></lightning-input>
+            <lightning-input type="text" label="Email" value={email} onchange={handleChangeEmail}></lightning-input>
+        </div>
+        <div class="slds-align_absolute-center" style="height:2rem">
+            <lightning-button type="button" label="ADD LEAD" onclick={handleClickAdd}></lightning-button>
+            <lightning-button type="button" label="CLEAR FIELDS" onclick={handleClickClear}></lightning-button>
+            <lightning-button type="button" label="DISPLAY LEADS" onclick={handleClickDisplay}></lightning-button>
+            <lightning-button type="button" label="DELETE LEADS" onclick={handleClickDelete}></lightning-button>
+        </div>
+    </lightning-card>
+
+    <template lwc:if={isEmpty}>
+        <template lwc:if={displayLeads}>
+            <lightning-card title="Lead Details">
+                <div class="slds-var-p-around_medium " >
+                    <div >
+                        <template for:each={leadObjArray} for:item="leadObj" for:index="index">
+                            <div class="slds-box" key={leadObj.index}>
+                                Name    : {leadObj.name}<br>
+                                Source  : {leadObj.source}<br>
+                                Revenue : {leadObj.revenue}<br>
+                                Email   : {leadObj.email}
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+    </template>
+
+    <template lwc:else>
+        <lightning-card>
+            <div class="slds-var-p-around_medium slds-align_absolute-center slds-box" style="height:4rem">
+                <B>No Leads Added Yet</B>
+            </div>
+        </lightning-card>
+    </template>
+
+</template>

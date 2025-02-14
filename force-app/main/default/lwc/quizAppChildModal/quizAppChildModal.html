@@ -1,0 +1,50 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-08-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+        <div class="slds-var-p-around_medium">
+            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    
+                    <div class="slds-modal__header ">
+                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate slds-grid" tabindex="-1">
+                        <div class="slds-col">Hello {playerName}</div> 
+                        <div class="slds-col">{displayTimer}</div>  
+                        <div class="slds-col"> Score:{score} </div>
+                        </h1>
+                    </div>
+
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                       
+                        <template for:each={questionToDisplay} for:item="item">
+                            <div key={item.index}>
+                                <b>{item.question}</b> <br>
+                                
+                             <lightning-input class="ans" type="checkbox" label={item.ans1} onchange={handleChangeAns}></lightning-input><br>
+                             <lightning-input class="ans" type="checkbox" label={item.ans2} onchange={handleChangeAns}></lightning-input><br>
+                             <lightning-input class="ans" type="checkbox" label={item.ans3} onchange={handleChangeAns}></lightning-input><br>
+                            </div>
+                        </template>
+
+                    </div>
+
+                    <div class="slds-modal__footer slds-modal__footer_directional slds-grid">
+                        
+                        <div class="slds-col ">
+                        <lightning-button lwc:ref="Previous" disabled="true" variant="brand" label="Previous" onclick={handleClickPrevious}></lightning-button></div>
+                        <div class="slds-col ">
+                        <lightning-button lwc:ref="Next" variant="brand" label="Next" onclick={handleClickNext}></lightning-button></div>
+                        <div class="slds-col ">
+                        <lightning-button variant="destructive" label="Finish" onclick={handleClickFinish}></lightning-button></div>
+                    </div>
+                </div>
+                </section>
+            <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+        </div>
+    </lightning-card>
+</template>

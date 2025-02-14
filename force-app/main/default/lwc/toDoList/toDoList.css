@@ -1,0 +1,13 @@
+:host {
+    font-weight: bold;
+    text-align: center;
+    
+}
+.noTask{
+    background-color: bisque;
+    color: black;
+}
+.whenTask{
+    background-color: aliceblue;
+    color: blue;
+}

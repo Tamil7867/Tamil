@@ -1,0 +1,42 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 12-10-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Indian Players">
+        <div class="slds-var-p-around_medium">
+
+            <div class="slds-box slds-box_x-small slds-text-align_center slds-var-m-around_x-small">
+                <b>Indian Players</b>
+                <lightning-carousel>
+                    <template for:each={indPlayers} for:item="curPlayer">
+                        <lightning-carousel-image
+                            key={curPlayer.id}
+                            src = {curPlayer.img}
+                            header={curPlayer.name}
+                            description = {curPlayer.description}>
+                        </lightning-carousel-image>
+                    </template>
+                </lightning-carousel>
+            </div>
+
+            <div class="slds-box slds-box_x-small slds-text-align_center slds-var-m-around_x-small">
+                <b>Australian Players</b>
+                <lightning-carousel>
+                    <template for:each={ausPlayers} for:item="curPlayer">
+                        <lightning-carousel-image
+                            key={curPlayer.id}
+                            src = {curPlayer.img}
+                            header={curPlayer.name}
+                            description = {curPlayer.description}>
+                        </lightning-carousel-image>
+                    </template>
+                </lightning-carousel>
+            </div>
+            
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+:host{
+    padding:10px;
+    font-size: medium;
+}
+.topicsDiv{
+    color: rgb(245, 25, 25);
+    font-weight: bold;
+}
+.conceptsDiv{
+    color: blue;
+    font-weight: bold;
+}
+.lastClass{
+    color: rgb(47, 174, 216);
+}

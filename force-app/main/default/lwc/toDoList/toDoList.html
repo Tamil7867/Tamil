@@ -1,0 +1,57 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-07-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-07-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-07-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+
+    <lightning-card title="To Do List">
+        
+        <template lwc:if={isTaskListEmpty}>
+                <template  for:each={taskList} for:item="item">
+                    <div key={item.taskId} class="slds-grid slds-m-around_medium">
+                        <div class="slds-var-p-around_medium slds-col whenTask" >
+                        {item.taskName}
+                        </div>
+                        <div class="slds-var-p-around_medium slds-col whenTask">
+                            <lightning-button-icon labels="Delete" name={item.taskId} icon-name="utility:delete" 
+                            variant="container"  onclick={handleClickDel}>
+                            </lightning-button-icon>
+                        </div>
+                    </div>
+                </template>
+        </template>
+
+        <template lwc:else>
+                <div class="slds-var-p-around_medium slds-m-around_medium noTask">
+                    No Task for Today
+                </div>
+        </template>
+
+            <div class="slds-var-p-around_medium slds-border_top" >  
+                <lightning-input label="Enter the Task" value={task} onchange={handleChangeTask}></lightning-input>
+            </div>
+            <div class="slds-var-p-around_medium">
+                <lightning-button label="Add" onclick={handleClickAdd}></lightning-button>
+            </div>
+    
+    </lightning-card>
+</template>

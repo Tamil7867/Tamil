@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-13-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+
+        <p> {revenue}</p>
+        <p> {complaintName}</p>
+        <div class="slds-m-around_medium">
+            <lightning-button label="Log Complaint" variant="brand" onclick={handleLogComplaint}></lightning-button>    
+        </div>
+
+        <template lwc:if={showLogComplaint}>
+            <c-log-complaint account-id={recordId} account-name={accName}></c-log-complaint>
+
+        </template>
+    </lightning-card>
+</template>

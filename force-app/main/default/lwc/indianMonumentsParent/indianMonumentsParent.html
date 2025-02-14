@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 12-12-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Indian Monuments">
+        <div class="slds-var-p-around_medium">
+            <lightning-button label="Show Monuments" variant="brand" onclick={handleClickShowMonuments}></lightning-button>
+            
+                <template lwc:if={showMonuments}>
+                    <c-indian-monuments-child oncancel={handleCancel}></c-indian-monuments-child>
+                </template>
+
+            <div class="slds-var-p-around_medium">
+                <template lwc:if={isNofavSpots}>
+                    <b>Favourite Monuments:</b>
+                    <template for:each={favSpots} for:item="item">
+                        <div key={item.index}>
+                            {item}
+                        </div>
+                    </template>
+                </template>
+
+                <template lwc:else><b>No Favourite Spot Added</b></template>
+            </div>
+        </div>
+        
+    </lightning-card>
+</template>

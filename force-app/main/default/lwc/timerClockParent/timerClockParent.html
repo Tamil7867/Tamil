@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 05-23-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Timer Clock">
+        <div class="slds-var-p-around_medium slds-grid">
+            <div class="slds-col">
+            <lightning-button label="Start" variant="success" onclick={handleClickStart}></lightning-button>
+            </div>
+            <div class="slds-col">
+                <lightning-button lwc:ref="stop" label="Stop" variant="destructive" disabled="true" onclick={handleClickStop}></lightning-button>
+            </div>
+            <div class="slds-col">
+                <lightning-button lwc:ref="reset" label="Reset" variant="brand" disabled="true" onclick={handleClickReset}></lightning-button>
+            </div>     
+        </div>
+        <div>
+            <c-timer-clock-child lwc:ref="timer"></c-timer-clock-child>
+        </div>
+    </lightning-card>
+</template>

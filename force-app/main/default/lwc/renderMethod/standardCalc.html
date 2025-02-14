@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Standard Calculator">
+        <div style="background-color: rgba(222, 184, 135, 0.481);">
+
+            <div class="slds-p-around_medium slds-box slds-align_absolute-center" style="font-size: x-large;">
+               <b>  {disp1} </b>
+            </div >
+
+            <div class="slds-grid slds-p-left_xx-large slds-p-right_xx-large slds-m-left_xx-large slds-p-right_xx-large">
+                <div class="slds-col slds-size_1-of-4"><lightning-button label="%" onclick={handleOperator}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="CE" onclick={handleC}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="C" onclick={handleC}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="<<" onclick={handleBack}></lightning-button></div>
+            </div>
+            
+            <div class="slds-grid slds-p-left_xx-large slds-p-right_xx-large slds-m-left_xx-large slds-p-right_xx-large">
+                <div class="slds-col slds-size_1-of-4"><lightning-button label="7" onclick={handleNumClick}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="8" onclick={handleNumClick}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="9" onclick={handleNumClick}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="/" onclick={handleOperator}></lightning-button></div>
+            </div>
+
+            <div class="slds-grid slds-p-left_xx-large slds-p-right_xx-large slds-m-left_xx-large slds-p-right_xx-large">
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="4" onclick={handleNumClick}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="5" onclick={handleNumClick}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4"><lightning-button label="6" onclick={handleNumClick}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4"><lightning-button label="*" onclick={handleOperator}></lightning-button></div>
+            </div>
+
+            <div class="slds-grid slds-p-left_xx-large slds-p-right_xx-large slds-m-left_xx-large slds-p-right_xx-large">
+                <div class="slds-col slds-size_1-of-4"><lightning-button label="1" onclick={handleNumClick}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="2" onclick={handleNumClick}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="3" onclick={handleNumClick}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="-" onclick={handleOperator}></lightning-button></div>
+            </div>
+
+            <div class="slds-grid slds-p-left_xx-large slds-p-right_xx-large slds-m-left_xx-large slds-p-right_xx-large">
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="^2" onclick={handleOperator}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="0" onclick={handleNumClick}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="=" onclick={handleEqual}></lightning-button></div>
+                <div class="slds-col slds-size_1-of-4" ><lightning-button label="+" onclick={handleOperator}></lightning-button></div>
+            </div>
+
+            <lightning-button class="slds-align_absolute-center" label="Close" variant="brand" onclick={handleClick}> </lightning-button>
+            
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-12-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Receipt">
+        <div class="slds-var-p-around_medium">
+            <lightning-button 
+              variant="brand"
+              label="Get Receipt" 
+              onclick={handleClick} 
+            ></lightning-button>
+
+        </div>
+
+        <template lwc:if={showModal}>
+            <c-receipt-modal con-record-id={conRecId} onclose={handleClose}></c-receipt-modal>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,36 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-28-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Apex In LWC">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+            name="Rating Picklist"
+            label="Select the Rating"
+            value={rating}
+            options={ratingOptions}
+            onchange={handleChangeRating} ></lightning-combobox>
+        </div>
+        <template lwc:if={accountData}>
+            <template for:each={accountData} for:item="accountRec">
+                <div class="slds-box slds-var-m-around_medium" key={accountRec.Id}>
+                    <p>
+                        Account Name: {accountRec.Name}
+                    </p>
+                    <p>
+                        Industry: {accountRec.Industry}
+                    </p>
+                    <p>
+                        Rating: {accountRec.Rating}
+                    </p>
+                </div>
+            </template>
+                
+                   
+        </template>
+    </lightning-card>
+</template>

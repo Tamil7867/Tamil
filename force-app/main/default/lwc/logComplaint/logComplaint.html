@@ -1,0 +1,17 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-13-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium">
+            <lightning-combobox label="Select the Issue" options={options} required="true" onchange={handleOptionsChange}></lightning-combobox>
+            <lightning-textarea label="Description" required="true" value={description} onchange={handleDescriptionChange}></lightning-textarea>
+            <lightning-textarea label="Resolution" value={resolution} onchange={handleResolutionChange}></lightning-textarea>
+            <lightning-button label="Submit" onclick={handleSubmit} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

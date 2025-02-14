@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-05-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Lookup to Account">
+        <div>
+            <lightning-record-edit-form object-api-name={objectApiName} record-id={recordId}>
+                <lightning-input-field field-name={lookupField}></lightning-input-field>
+                    <div class="slds-var-m-top_medium">
+                        <lightning-button variant="brand" type="submit" label="Save">
+                        </lightning-button>
+                    </div>
+            </lightning-record-edit-form>
+            <p>
+                <lightning-formatted-rich-text value={addressField}></lightning-formatted-rich-text>
+                
+            </p>
+        </div>
+    </lightning-card>
+</template>

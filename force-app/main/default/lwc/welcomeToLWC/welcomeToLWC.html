@@ -1,0 +1,102 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 10-08-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <!-- <div>
+        Hello Welcome to LWC.
+        <div><a href="https://www.google.co.in/">click to see</a></div>
+        
+    </div>
+    
+    <div class="mycustomdiv">
+        Hello Welcome to LWC.
+    </div>
+    <p class="mycustomdiv">
+        Hello Welcome to LWC.
+    </p> -->
+    <lightning-card title="Suduko Grid 5 X 5">
+    <div class="slds-var-p-around_medium slds-box slds-border_left slds-border_right slds-align_absolute-center" style="height:5rem">
+        <div class="slds-grid slds-gutters slds-wrap">
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: red;">
+              <span>1</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: blue;">
+                <span>2</span>
+              </div>
+              <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: green;">
+                <span>3</span>
+              </div>
+              <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: orange;">
+                <span>4</span>
+              </div>
+              <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: yellow;">
+                <span>5</span>
+              </div>
+                <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: grey;">
+            <span>1</span>
+          </div>
+          <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: purple;">
+              <span>2</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: rgb(224, 12, 12);">
+              <span>3</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: rgb(14, 48, 16);">
+              <span>4</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: rgb(177, 165, 175);">
+              <span>5</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: red;">
+              <span>1</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: blue;">
+                <span>2</span>
+              </div>
+              <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: green;">
+                <span>3</span>
+              </div>
+              <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: orange;">
+                <span>4</span>
+              </div>
+              <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: yellow;">
+                <span>5</span>
+              </div>
+                <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: grey;">
+            <span>1</span>
+          </div>
+          <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: purple;">
+              <span>2</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: rgb(224, 12, 12);">
+              <span>3</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: rgb(14, 48, 16);">
+              <span>4</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: rgb(177, 165, 175);">
+              <span>5</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: red;">
+              <span>1</span>
+            </div>
+            <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: blue;">
+                <span>2</span>
+              </div>
+              <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: green;">
+                <span>3</span>
+              </div>
+              <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: orange;">
+                <span>4</span>
+              </div>
+              <div class="slds-col slds-size_2.5-of-12 slds-align_absolute-center slds-box slds-box_xx-small" style="background-color: yellow;">
+                <span>5</span>
+              </div>
+      </div>
+      </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,40 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 12-10-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Display Players">
+        <div class="slds-var-p-around_medium">
+            <template lwc:if={isPlayersObjEmpty}>
+                <div class="slds-var-p-around_medium">
+                    <template for:each={playerArrayObj} for:item="curPlayer" for:index="index">
+                        <div class="slds-var-p-around_medium" key={curPlayer.index}>
+                            Player Name: {curPlayer.name} <br>
+                            Score: {curPlayer.score} <br>
+                            Team: {curPlayer.team} <br>
+                        </div>
+                    </template>
+                </div>
+            </template>
+            <template lwc:elseif={isTopPlayerScore}>
+                <div class="slds-var-p-around_medium">
+                    <template for:each={topPlayerScore} for:item="curPlayer" for:index="index">
+                        <div class="slds-var-p-around_medium" key={curPlayer.index}>
+                            Player Name: {curPlayer.name} <br>
+                            Score: {curPlayer.score} <br>
+                            Team: {curPlayer.team} <br>
+                        </div>
+                    </template>
+                </div>
+            </template>
+            <template lwc:else>
+                <div class="slds-var-p-around_medium">
+                    No Player details added yet
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

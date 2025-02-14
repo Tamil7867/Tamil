@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 12-10-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Enter the Top Scorer Details">
+        <div class="slds-var-p-around_medium">
+            <lightning-input label="Player Name" value={name} onchange={handleNameChange}></lightning-input>
+        </div>
+        <div class="slds-var-p-around_medium">
+            <lightning-input label="Score" value={score} onchange={handleScoreChange}></lightning-input>
+        </div>
+        <div class="slds-var-p-around_medium">
+            <lightning-input label="Team" value={team} onchange={handleTeamChange}></lightning-input>
+        </div>
+        <div class="slds-var-p-around_medium slds-grid">
+            <lightning-button class= "slds-col" label="Add More" variant="brand" onclick={handleAddMoreClick}></lightning-button>
+            <lightning-button class= "slds-col" label="Clear" variant="brand" onclick={handleClearClick}></lightning-button>
+            <lightning-button class= "slds-col" lwc:ref="display" label="Top Scorer" variant="brand" disabled=true onclick={handleTopScorerClick}></lightning-button>
+        </div>
+
+        <div>
+            <c-top-scorer-child top-player-score={topScorer} player-array-obj={playersDetailObj}></c-top-scorer-child>
+        </div>
+    </lightning-card>
+</template>

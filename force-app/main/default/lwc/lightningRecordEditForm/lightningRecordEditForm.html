@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-12-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Lightning Record Edit Form">
+        <lightning-record-edit-form object-api-name={account} record-id={recordId}
+        onsubmit={submitHandler} onsuccess={successHandler} onerror={errorHandler}>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning-input-field field-name={fields.name}></lightning-input-field>
+                    <lightning-input-field field-name={fields.industry}></lightning-input-field>
+                    
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <!-- <lightning-input label="Phone" value={fields.phone} onchange={handlePhoneChange}></lightning-input> -->
+                    <lightning-input-field field-name={fields.phone}></lightning-input-field> 
+                    <lightning-input-field field-name={fields.annualRevenue} lwc:ref='revenue'></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-grid">
+                <div class="slds-col slds-align_absolute-center">
+                    <lightning-button label="Cancel" type="reset"></lightning-button>
+                </div>
+                <div class="slds-col slds-align_absolute-center">
+                    <lightning-button label="Submit" type="submit"></lightning-button>
+                </div>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

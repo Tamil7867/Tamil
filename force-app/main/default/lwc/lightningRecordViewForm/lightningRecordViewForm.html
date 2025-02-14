@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-03-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="lighting-record-view-form">
+        <div class="slds-var-p-around_medium">
+            <lightning-record-view-form
+            object-api-name={objectApiName}
+            record-id={recordId}>
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_4-of-12">
+                    <lightning-output-field field-name={name}></lightning-output-field>
+                    <lightning-output-field field-name={bloodGroup}></lightning-output-field>
+                    
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                    <lightning-output-field field-name={age}></lightning-output-field>
+                    <lightning-output-field field-name={email}></lightning-output-field>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                    <lightning-output-field field-name={phone}></lightning-output-field>
+                    <lightning-output-field field-name={lastDonatedDate}></lightning-output-field>
+                </div>
+            </div>
+            </lightning-record-view-form>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-25-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Picklist Values Based on Record Types">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+            name="Record Type Picklist"
+            label="Select Record Type Name"
+            value={recordTypeValue}
+            options={recordTypeOptions}
+            onchange={handleChangeRecordType} ></lightning-combobox>
+
+            <lightning-combobox
+            name="Picklist values Related to Record Type"
+            label="Picklist related to Record Type"
+            value={picklistValue}
+            options={recordTypePicklistValues}
+            onchange={handleChangePicklistValues} ></lightning-combobox>
+            
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,47 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-20-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Conditional Rendering - Login Options">
+        <div class="slds-var-p-around_medium">
+            <lightning-input type="checkbox" class="checkMember" label="Members Login" onchange={handleMembersLogin}></lightning-input>
+            <lightning-input type="checkbox" class="checkNewMember" label="New Member Signin" onchange={handleNewMemberSignin}></lightning-input>
+        </div>
+        <div class="slds-var-p-around_medium">
+
+        <template lwc:if={isMembersLoginChosen}>
+            <lightning-card title="Enter Login Credncials">
+                <div class="slds-var-p-around_medium slds-box">
+                    <lightning-input type="text" label="User Name" value={name} onchange={handleChangeName}></lightning-input>
+                    <lightning-input type="password" label="Password" value={password} onchange={handleChangePassword}></lightning-input>
+                    <lightning-button label="Login" onclick={handleClickLogin}></lightning-button>
+                    <!-- <br>{success}
+                    <br>{failiure} -->
+                </div>
+            </lightning-card>
+        </template>
+
+        <template lwc:elseif ={isNewMemberSigninChosen}>
+            <lightning-card title="Enter Your Details">
+                <div class="slds-var-p-around_medium slds-box">
+                    <lightning-input type="text" label="Name" value={name} onchange={handleChangeName}></lightning-input>
+                    <lightning-input type="text" label="Email" value={email} onchange={handleChangeEmail}></lightning-input>
+                    <lightning-button label="Register" onclick={handleClickRegister}></lightning-button>
+                    <!-- <br>{success}
+                    <br>{failiure} -->
+                </div>
+            </lightning-card>
+        </template>
+
+        <template lwc:else>
+            <div class="slds-var-p-around_medium slds-box">
+            <b>Choose Member Login if you are existing Member or Choose New Member Signin</b> 
+            </div>
+        </template>
+        </div>
+    </lightning-card>
+</template>

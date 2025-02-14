@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 02-09-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="LWC - Subscriber">
+        <div class="slds-var-p-around_medium">
+            <template for:each={accRec} for:item="rec">
+                <div key={rec.Id}>
+                    <p class="slds-var-m-around_medium">Account Name: {rec.Name}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

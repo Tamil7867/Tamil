@@ -1,0 +1,59 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-22-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Update Record">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+              type="text"
+              name="recordId"
+              label="Record ID"
+              value={recordId}
+              onchange={handleChange}
+            ></lightning-input>
+            <lightning-input 
+              type="text"
+              name="name"
+              label="Name"
+              value={name}
+              onchange={handleChange}
+            ></lightning-input>
+            <lightning-input 
+              type="text"
+              name="industry"
+              label="Industry"
+              value={industry}
+              onchange={handleChange}
+            ></lightning-input>
+            <lightning-input 
+              type="text"
+              name="revenue"
+              label="Revenue"
+              value={revenue}
+              onchange={handleChange}
+            ></lightning-input>
+
+            <div class="slds-grid slds-align_absolute-center">
+                <div class="slds-col">
+                    <lightning-button 
+                    variant="brand"
+                    label="Update" 
+                    onclick={handleClickUpdate} 
+                  ></lightning-button> 
+                </div>
+                <div class="slds-col">
+                    <lightning-button 
+                      variant="brand"
+                      label="Clear" 
+                      onclick={handleClickClear} 
+                    ></lightning-button>
+                </div>
+            
+            </div>
+        </div>
+    </lightning-card>
+</template>
