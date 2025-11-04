@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import ApexInLwc from 'c/apexInLwc';
 
 describe('c-apex-in-lwc', () => {

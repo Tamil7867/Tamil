@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import AccountDataSubscriber from 'c/accountDataSubscriber';
 
 describe('c-account-data-subscriber', () => {

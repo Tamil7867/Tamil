@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import PickListColumnDataTable from 'c/pickListColumnDataTable';
 
 describe('c-pick-list-column-data-table', () => {

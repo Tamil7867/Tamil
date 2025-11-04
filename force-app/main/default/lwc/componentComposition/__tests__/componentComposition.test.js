@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import ComponentComposition from 'c/componentComposition';
 
 describe('c-component-composition', () => {

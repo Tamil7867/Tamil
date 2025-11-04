@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import RenderMethod from 'c/renderMethod';
 
 describe('c-render-method', () => {

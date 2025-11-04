@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import EmailToOthers from 'c/emailToOthers';
 
 describe('c-email-to-others', () => {

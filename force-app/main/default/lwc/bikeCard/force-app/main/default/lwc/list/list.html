@@ -1,0 +1,14 @@
+<!--
+  @description       : 
+  @author            : Tamil Selvan J
+  @group             : 
+  @last modified on  : 03-22-2025
+  @last modified by  : Tamil Selvan J
+-->
+<template>
+    <div class="container">
+      <template for:each={bikes} for:item="bike">
+        <c-tile key={bike.fields.Id.value} product={bike} ontileclick={handleTileClick}></c-tile>
+      </template>
+    </div>
+  </template>

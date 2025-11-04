@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import QuizAppChildModal from 'c/quizAppChildModal';
 
 describe('c-quiz-app-child-modal', () => {

@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import ReceiptModal from 'c/receiptModal';
 
 describe('c-receipt-modal', () => {

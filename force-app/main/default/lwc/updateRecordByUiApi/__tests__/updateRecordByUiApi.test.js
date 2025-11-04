@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import UpdateRecordByUiApi from 'c/updateRecordByUiApi';
 
 describe('c-update-record-by-ui-api', () => {

@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import LogComplaintOnCase from 'c/logComplaintOnCase';
 
 describe('c-log-complaint-on-case', () => {

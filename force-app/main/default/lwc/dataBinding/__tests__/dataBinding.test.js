@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import DataBinding from 'c/dataBinding';
 
 describe('c-data-binding', () => {

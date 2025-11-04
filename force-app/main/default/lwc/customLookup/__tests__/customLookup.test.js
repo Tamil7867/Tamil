@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import CustomLookup from 'c/customLookup';
 
 describe('c-custom-lookup', () => {

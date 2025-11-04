@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import TimerClockChild from 'c/timerClockChild';
 
 describe('c-timer-clock-child', () => {

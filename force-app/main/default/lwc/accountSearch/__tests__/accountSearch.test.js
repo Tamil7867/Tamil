@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import AccountSearch from 'c/accountSearch';
 
 describe('c-account-search', () => {

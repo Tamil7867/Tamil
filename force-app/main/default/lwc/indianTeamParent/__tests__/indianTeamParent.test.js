@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import IndianTeamParent from 'c/indianTeamParent';
 
 describe('c-indian-team-parent', () => {
