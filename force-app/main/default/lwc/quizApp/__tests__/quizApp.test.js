@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import QuizApp from 'c/quizApp';
 
 describe('c-quiz-app', () => {

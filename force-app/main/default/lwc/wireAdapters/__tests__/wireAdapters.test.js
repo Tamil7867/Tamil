@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import WireAdapters from 'c/wireAdapters';
 
 describe('c-wire-adapters', () => {

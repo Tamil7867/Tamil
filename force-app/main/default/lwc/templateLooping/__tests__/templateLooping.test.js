@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import TemplateLooping from 'c/templateLooping';
 
 describe('c-template-looping', () => {

@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import IndianMonumentsParent from 'c/indianMonumentsParent';
 
 describe('c-indian-monuments-parent', () => {

@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import CustomRichText from 'c/customRichText';
 
 describe('c-custom-rich-text', () => {

@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import CustomDataTable from 'c/customDataTable';
 
 describe('c-custom-data-table', () => {

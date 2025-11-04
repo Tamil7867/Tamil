@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import TemplateIterator from 'c/templateIterator';
 
 describe('c-template-iterator', () => {

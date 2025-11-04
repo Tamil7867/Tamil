@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Tamil Selvan J
+  @group             : 
+  @last modified on  : 03-22-2025
+  @last modified by  : Tamil Selvan J
+-->
+<template>
+    <div class="wrapper">
+      <header class="header">Available Bikes for {name}</header>
+      <section class="content">
+        <div class="columns">
+          <main class="main" >
+            <c-list onproductselected={handleProductSelected}></c-list>
+          </main>
+          <aside class="sidebar-second">
+            <c-detail product-id={selectedProductId}></c-detail>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </template>

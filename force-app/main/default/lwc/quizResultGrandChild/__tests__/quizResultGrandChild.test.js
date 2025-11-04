@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import QuizResultGrandChild from 'c/quizResultGrandChild';
 
 describe('c-quiz-result-grand-child', () => {

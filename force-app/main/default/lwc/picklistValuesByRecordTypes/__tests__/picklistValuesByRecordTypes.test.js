@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import PicklistValuesByRecordTypes from 'c/picklistValuesByRecordTypes';
 
 describe('c-picklist-values-by-record-types', () => {

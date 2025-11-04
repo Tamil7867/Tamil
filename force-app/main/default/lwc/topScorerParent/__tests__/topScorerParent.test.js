@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import TopScorerParent from 'c/topScorerParent';
 
 describe('c-top-scorer-parent', () => {

@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+//import { createElement } from 'lwc';
 import Receipt from 'c/receipt';
 
 describe('c-receipt', () => {

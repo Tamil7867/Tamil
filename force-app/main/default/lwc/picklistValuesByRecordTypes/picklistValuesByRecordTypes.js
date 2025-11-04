@@ -19,6 +19,7 @@ export default class PicklistValuesByRecordTypes extends LightningElement {
             //this.recordTypeOptions=
         }
     }
+    
     handleChangeRecordType(event){
         
         this.recordTypeValue=event.target.value;
